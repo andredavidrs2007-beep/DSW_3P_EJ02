@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "Angel",
+    "VideoJuego": "Rial Life",
+    "Clase": "Especial",
+    "Nivel": 10,
+    "Poder": 10,
+    "Disponible": true,
+    "ImagenUrl": "Simon"
+  }
+]

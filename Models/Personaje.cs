@@ -1,0 +1,13 @@
+namespace DSW_3P_EJ02.Models;
+
+public class Personaje
+{
+    public int Id{get; set;}
+    public string Nombre{get; set;} = "";
+    public string VideoJuego{get; set;} = "";
+    public string Clase {get; set;} = "";
+    public int Nivel {get; set;}
+    public int Poder {get; set;}
+    public bool Disponible {get; set;}
+    public string ImagenUrl {get; set;} = "";
+}
