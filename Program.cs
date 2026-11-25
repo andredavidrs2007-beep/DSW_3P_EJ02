@@ -46,6 +46,19 @@ builder.Services
            };
    });
 
+//Configuracion de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("QuestLogFrontend", policy =>
+    {
+        policy.WithOrigins(
+                "http://localhost:5500",
+                "http://127.0.0.1:5500"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -59,6 +72,8 @@ if (app.Environment.IsDevelopment())
     options.SwaggerEndpoint("/openapi/v1.json", "API de Personajes V1");
     });
 }
+
+app.UseCors("QuestLogFrontend");
 
 app.UseHttpsRedirection();
 
