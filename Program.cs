@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using DSW_3P_EJ02.Data;
 using DSW_3P_EJ02.Repositories;
 using DSW_3P_EJ02.Services;
 
@@ -9,9 +11,14 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IPersonajeRepository, PersonajeJsonRepository>();
+builder.Services.AddScoped<IPersonajeRepository, PersonajeSQLRepository>();
 builder.Services.AddScoped<IPersonajeService, PersonajeService>();
-
+//Configuracion de SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("SqlServerConnection")
+    )
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

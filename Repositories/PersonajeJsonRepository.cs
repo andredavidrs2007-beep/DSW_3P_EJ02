@@ -50,7 +50,7 @@ public class PersonajeJsonRepository : IPersonajeRepository
     public List<Personaje> ObtenerPorVideojuego(string videojuego)
     {
         return Leer()
-            .Where(d => d.VideoJuego.Equals(videojuego, StringComparison.OrdinalIgnoreCase))
+            .Where(d => d.Videojuego.Equals(videojuego, StringComparison.OrdinalIgnoreCase))
             .ToList();
     }
 
@@ -76,7 +76,7 @@ public class PersonajeJsonRepository : IPersonajeRepository
             return false;
         }
         existente.Nombre = actualizada.Nombre;
-        existente.VideoJuego = actualizada.VideoJuego;
+        existente.Videojuego = actualizada.Videojuego;
         existente.Clase = actualizada.Clase;
         existente.Nivel = actualizada.Nivel;
         existente.Poder = actualizada.Poder;

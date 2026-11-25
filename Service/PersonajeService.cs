@@ -16,7 +16,7 @@ public class PersonajeService : IPersonajeService
     {
         if (string.IsNullOrWhiteSpace(Personaje.Nombre))
             throw new ArgumentException("El nombre no puede estar vacio");
-        if (string.IsNullOrWhiteSpace(Personaje.VideoJuego))
+        if (string.IsNullOrWhiteSpace(Personaje.Videojuego))
             throw new ArgumentException("El videojuego no puede estar vacio");
         if (string.IsNullOrWhiteSpace(Personaje.Clase))
             throw new ArgumentException("La clase no puede estar vacia");
