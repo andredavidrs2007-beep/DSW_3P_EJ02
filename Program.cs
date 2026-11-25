@@ -2,14 +2,51 @@ using Microsoft.EntityFrameworkCore;
 using DSW_3P_EJ02.Data;
 using DSW_3P_EJ02.Repositories;
 using DSW_3P_EJ02.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.OpenApi;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer((document, context, cancellationToken) =>
+    {
+        document.Components ??= new OpenApiComponents();
+        document.Components.SecuritySchemes =
+            new Dictionary<string, IOpenApiSecurityScheme>
+            {
+                ["Bearer"] = new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    In = ParameterLocation.Header,
+                    BearerFormat = "JWT"
+                }
+            };
+        return Task.CompletedTask;
+    });
+
+    options.AddOperationTransformer((operation, context, cancellationToken) =>
+    {
+        var endpointMetadata = context.Description.ActionDescriptor.EndpointMetadata;
+        if (endpointMetadata.OfType<IAuthorizeData>().Any() &&
+            !endpointMetadata.OfType<IAllowAnonymous>().Any())
+        {
+            operation.Security ??= [];
+            operation.Security.Add(new OpenApiSecurityRequirement
+            {
+                [new OpenApiSecuritySchemeReference("Bearer", context.Document)] = []
+            });
+        }
+
+        return Task.CompletedTask;
+    });
+});
 
 builder.Services.AddControllers();
 

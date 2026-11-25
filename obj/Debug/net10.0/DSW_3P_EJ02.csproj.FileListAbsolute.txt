@@ -168,3 +168,5 @@ C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ
 C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ02\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ02\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll
 C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ02\obj\Debug\net10.0\DSW_3P_EJ02.sourcelink.json
+C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ02\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Universidad\Tercer Semestre\Desarrollo de Servicio Web\DSW\Parcial3\DSW_3P_EJ02\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll

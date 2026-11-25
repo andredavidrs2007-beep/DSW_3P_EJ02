@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj": {}
+    "C:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj": {}
   },
   "projects": {
-    "c:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj": {
+    "C:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj",
+        "projectUniqueName": "C:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj",
         "projectName": "DSW_3P_EJ02",
-        "projectPath": "c:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj",
+        "projectPath": "C:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\DSW_3P_EJ02.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "c:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\obj\\",
+        "outputPath": "C:\\Universidad\\Tercer Semestre\\Desarrollo de Servicio Web\\DSW\\Parcial3\\DSW_3P_EJ02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
